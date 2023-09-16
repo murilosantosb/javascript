@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+    <style>
+        body{
+            background-color: rgb(212, 212, 150);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 , h2{
+            text-align: center;
+            font-size: 3em;
+        }
+      form  {
+        border: 1px solid black;
+        height: 200px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        background-color: rgb(177, 177, 177);
+      }
+      div{
+        text-align: center;
+        margin-top: 15px;
+      }
+    </style>
+</head>
+<body>
+    <h1>Eleição 2026</h1>
+    
+    <h2>VOTE:</h2>
+   
+    <form action="">
+        
+        <p>
+            <label for="iidade">Qual é sua Idade?</label>
+            <input type="number" name="dade" id="iidade" required>
+        </p>
+        <p>
+            <input type="button" value="Verificar" onclick="clicar()">
+        </p>
+    </form>
+</fieldset>
+    <div id="Ver">Verificação:</div>
+    
+    <script>
+        function clicar(){
+
+        var idade = document.getElementById('iidade').value
+        var res = document.getElementById('Ver')
+        
+        idade = parseInt(idade)
+
+        if(idade < 16){
+            res.innerText = 'Não vota'
+        }else if (idade < 18 || idade > 65 ){
+            res.innerText = 'Opcional'
+      }else{
+        res.innerText = 'Obrigatorio'
+      }
+    }
+    </script>
+</body>
+</html>
