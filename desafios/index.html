@@ -12,29 +12,31 @@
         }
     </style>
 </head>
-<body>
-    <h1>Calculadora</h1>
-    <form action="">
-        <label for="inum1">Número 1</label>
-        <input type="number" name="num1" id="inum1">  +
+<body> 
+    <h1>Carteira de Motorista</h1>
 
-        <label for="inum2">Número 2</label>
-        <input type="number" name="num2" id="inum2">
-        <input type="button" value="Calcular" onclick="Calc()">
-    </form>
-    <div id="res">0</div>
+    <label for="idade">Qual é a sua idade?</label>
+    <input type="number" name="dade" id="idade"> 
+    <input type="button" value="Verificar" onclick="clicar()">
+
+    <div id="res">Resultado:</div>
+    
 
     <script>
-        function Calc(){
-            let Num1 = document.getElementById('inum1')
-            let Num2 = document.getElementById('inum2')
-            let res = document.getElementById('res')
-            var n1 = Number(Num1.value)
-            var n2 = Number(Num2.value)
-            var s = n1 + n2
-            res.innerHTML = s
+        function clicar(){
+        var idade = document.getElementById('idade').value
+        var res = document.getElementById('res')
+
+
+        if(idade >= 18){
+            res.innerHTML = 'Você pode dirigir'
+        }else if (idade < 18){
+            res.innerHTML = 'Você não tem idade suficiente para dirigir'
+        }else{
+            res.innerHTML = 'Você não tem carteira de motorista'
         }
-     
+
+        }
     </script>
 </body>
 </html>
