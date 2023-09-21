@@ -17,11 +17,29 @@ header > h1{
 }
 section{
     background-color: white;
-    height: 70px;
+    height: 400px;
     width: 65%;
     padding: 15px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
     border-radius: 15px;
+    margin: auto;
+}
+/* div#foto{
+      background: url(../imagens/manha.jpg) no-repeat
+      left center ;
+      background-size: cover;
+      height: 350px;
+      width: 370px;
+      border-radius: 50%;
+      margin: auto;  
+      
+} */
+
+div > img#imagem{
+    display: block;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
     margin: auto;
 }
 footer{
