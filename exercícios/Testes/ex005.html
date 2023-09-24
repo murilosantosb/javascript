@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(190, 144, 88);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistemas de Multa</h1>
+    <label for="ivel">Velocidade do carro:</label>
+    <input type="number" name="vel" id="ivel"> Km/h
+    <p>
+        <input type="button" value="Verificar" onclick="verificar()">
+    </p>   
+
+    <div id="res"></div>
+    <div id="Multa"></div>
+    
+    <script>
+        function verificar(){
+            var velocidade = document.getElementById('ivel')
+            var res = document.getElementById('res')
+            var multa = document.getElementById('Multa')
+            var s = (velocidade.value)
+            res.innerHTML = `Sua velocidade foi de ${s} Km/h`
+
+            if(s > 80){
+                multa.innerHTML = 'Você foi multado'
+            }
+        }
+    </script>
+</body>
+</html>

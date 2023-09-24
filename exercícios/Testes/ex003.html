@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(to top ,  rgba(11, 168, 129, 0.932) , rgba(23, 131, 255, 0.849));
+            height: 97vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora:</h1>
+
+    <form action="">
+        <label for="inum1">N1</label>
+        <input type="number" name="num1" id="inum1"> +
+
+        <label for="inum2">N2</label>
+        <input type="number" name="num2" id="inum2">
+
+        <input type="button" value="Somar" onclick="somar()">
+    </form>
+    
+    <div id="res">Resultado:</div>
+
+    <script>
+        function somar(){
+            var Num1 = document.getElementById('inum1')
+            var Num2 = document.getElementById('inum2')
+            var res = document.getElementById('res')
+            var n1 = Number(Num1.value)
+            var n2 = Number(Num2.value)
+            var resunt = n1 * n2
+            res.innerText = resunt
+        }
+    </script>
+</body>
+</html>

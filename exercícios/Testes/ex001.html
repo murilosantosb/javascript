@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+    <style>
+        body{
+            background-color: rgba(136, 29, 29, 0.466);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            background-color: bisque;
+            height: 300px;
+            width: 400px;
+            text-align: center;
+            margin: auto;
+            padding: 15px;
+        }
+        button{
+            height: 100px;
+            width: 200px;
+            
+        }
+        div{
+            margin-top: 18px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Media do aluno v2.0</h1>
+        <button onclick="click()">Calcular Média</button>
+        
+        <div id="res">O resultado vai aparecer aqui...</div>
+        <div id="mediaa"></div>
+       <!-- <div id="notas"></div>
+        <div id="notat"></div>
+        <div id="media"></div>  -->
+    </main>
+    
+    <script>
+        var res = document.getElementById('res')
+        var media = document.getElementById('mediaa')
+        
+        var nome = prompt('Qual seu nome?')
+        nome = document.write(`Calculando a média final de ${nome}`)
+        var notam = prompt('Qual foi sua nota na prova de Matemática?')
+        var notat = prompt('Qual foi sua nota no Trabalho?')
+        notam = document.write(`<p>As notas obtidas foram ${notam} e ${notat}</p>`)
+        
+        if (notam >= 8){
+            document.write = 'Sua media é 10'
+            
+        }
+    </script>
+        
+        
+</body>
+</html>

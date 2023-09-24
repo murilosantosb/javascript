@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(207, 202, 196);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sua Nacionalidade</h1>
+    <label for="ipais">Qual é sua Nacionalidade?</label>
+    <input type="text" name="pais" id="ipais"> BR ou EUA
+    <p>
+        <input type="button" value="Verificar" onclick="Nacionalidade()">
+    </p>
+
+    <div id="res">Nacionalidade</div>
+    <div id="imora">Qual país?</div>
+    
+
+    <script>
+        function Nacionalidade(){
+            var pais = document.getElementById('ipais')
+            var res = document.getElementById('res')
+            var mora = document.getElementById('imora')
+            var resunt = (pais.value)
+            res.innerHTML = `Vivendo no ${resunt}`
+           
+
+            if(resunt == 'Brasil'){
+             mora.innerHTML =  ` <p>   Você é Brasileiro  </p>`
+            }else{
+               mora.innerHTML =  `<p> Você é Estrangeiro </p>`
+            }
+        }
+    </script>
+</body>
+</html>
