@@ -1,6 +1,32 @@
+let num = document.querySelector('input#inum')
+let lista = document.getElementById('flista')
+let res = document.getElementById('res')
+let valores = []
+
+
+
+function isNumero(n){
+    if(Number(n) >= 1 && Number(n) <=100){
+        return true 
+    }else{
+        return false
+    }
+}
+
+function inLista(n){
+    if (l.indexOf(Number(n)) != -1){
+        return true
+    }else{
+        return false
+    }
+}
+
+
+
 function adicionar(){
-    let n = [1,2,3,4]
-    for(let c = n; c <= 100; c++){
-        return n
+    if(isNumero(num.value) && !inLista(num.value , valores)){
+
+    }else{
+        alert('Valor inválido ou já encontrado na lista!')
     }
 }
