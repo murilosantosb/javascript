@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.87);
+            color: white;
+            margin: 40px;
+            font-family: Arial, Helvetica, sans-serif ;
+        }
+        button{
+             background-color: green;
+             color: white;
+             height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Super Tabuada</h1>
+    <p>Escreva um número na caixa a seguir e te mostrarei a tabuada dele.</p>
+    <p>
+        <label for="inum">NÚMERO:</label>
+        <input type="number" name="num" id="inum">
+
+        <button onclick="Clicar()">Tabuada</button>
+    </p>
+
+    <div id="res">
+        Preencha os dados acima e aperte o botão.
+    </div>
+    
+
+    <script>
+        function Clicar(){
+            let n = 1
+            let num = document.getElementById('inum')
+            let res = document.getElementById('res')
+            let n1 = Number(num.value)
+            let resunt = n1 * n
+            
+            res.innerHTML = `<h2>Tabuada de ${n1}</h2>`
+
+            for(let c=1; c <= 10; c++){
+                res.innerHTML = `${n1} x ${n} = ${resunt} `
+            }
+            
+        }
+    </script>
+</body>
+</html>
