@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.719);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        button{
+            height: 100px;
+            width: 150px;
+            background-color: rgba(0, 0, 0, 0.527);
+            color: white;
+        }
+        div{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do aluno</h1>
+
+    <button onclick="ibotao" id="botao">Calcular média</button>
+
+    <div id="res">O resultado vai aparecer aqui...</div>
+    
+
+
+    <script>
+        function ibotao(){
+            let botao = document.getElementById('botao')
+            botao.addEventListener('click',()=>{
+            const nome = prompt('Qual seu nome?')
+            let nota = prompt('Qual foi sua nota')
+            let segundaNota = prompt('Qual foi sua outra nota?')
+            })
+         
+        }     
+            
+       
+    </script>
+</body>
+</html>
