@@ -29,26 +29,26 @@
     </div>
     
     <script>
-        var a = window.document.getElementById('area')
-        
-        a.addEventListener('click',clicar)
-        a.addEventListener('mouseenter', entrar)
-        a.addEventListener('mouseout', sair)
+        let a = document.getElementById('area')
 
+        a.addEventListener('click',clicar)
+        a.addEventListener('mouseout', sair)
+        a.addEventListener('mouseenter',entrar)
 
         function clicar(){
-            
-            a.innerText = 'clicou'
             a.style.background = 'red'
+            a.innerText = 'Clicou!'
+        }
+
+        function sair(){
+            a.innerText = 'Saiu!'
+
         }
 
         function entrar(){
             a.innerText = 'Entrou!'
-        }
-        function sair(){
-            a.innerText = 'Saiu!'
-            a.style.background = 'green'
-        }
+        }       
     </script>
 </body>
 </html>
+

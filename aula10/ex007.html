@@ -27,15 +27,18 @@
         <div id="res">Resultado</div>
 
         <script>
-            function somar() {
-            var tn1 = window.document.getElementById('itxn1')
-            var tn2 = window.document.getElementById('itxn2')
-            var res = window.document.getElementById('res')
-            var n1 = Number(tn1.value)
-            var n2 = Number(tn2.value)
-            var s = n1 + n2
-            res.innerHTML = s 
-            }
+            function somar(){
+            let n1 = document.getElementById('itxn1')
+            let n2 = document.getElementById('itxn2')
+            let res = document.querySelector('#res')
+            let num1 = Number(n1.value)
+            let num2 = Number(n2.value)
+            let resunt = num1 + num2
+
+            res.innerHTML = `A soma de ${num1} + ${num2} = ${resunt}`
+
+            
+        }
         </script>
         
     

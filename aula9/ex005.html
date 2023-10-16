@@ -27,10 +27,11 @@
     
     <script>
         let corpo = window.document.body
-        let p1 = window.document.getElementsByTagName('p')[1]
-        window.document.write(p1.innerText)
+        let p1 = document.getElementsByTagName('p')[1]
+        document.write(p1.innerText)
         p1.style.color = 'blue'
         corpo.style.background = 'orange'
+        
 
         /*let m = window.document.getElementById('msg')
         m.style.background = 'green'
@@ -41,9 +42,11 @@
 
        /* let e = window.document.getElementsByClassName('msg')[0]
         e.innerText = 'Como vai?' */
-
+       
+       let email =  prompt('Digite seu Email')
        let s = window.document.querySelector('div#msg') 
-       s.innerText = 'Digite seu E-mail'
+         s.document.write(`Seu email é ${email}`)
+       s.innerText = 'Digite o seu E-mail'
        s.style.color = 'yellow'
     </script>
 </body>

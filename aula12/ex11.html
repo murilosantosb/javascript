@@ -51,16 +51,16 @@
         var idade = document.getElementById('iidade').value
         var res = document.getElementById('Ver')
         
-        idade = parseInt(idade)
-
-        if(idade < 16){
-            res.innerText = 'Não vota'
-        }else if (idade < 18 || idade > 65 ){
-            res.innerText = 'Opcional'
-      }else{
-        res.innerText = 'Obrigatorio'
-      }
-    }
+        idade = parseInt(idade) // parseInt Serve para Converte uma String em um Número inteiro!
+         
+         if(idade < 16){
+            res.innerHTML = 'Não vota!'
+         }else if(idade < 18 || idade > 65){
+            res.innerHTML = 'Voto opcional'
+         }else{
+            res.innerHTML = 'Obrigatorio'
+         }
+        }
     </script>
 </body>
 </html>
