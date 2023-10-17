@@ -17,39 +17,32 @@
 </head>
 <body>
     <h1>Teste das mensagens</h1>
-    <button id="botao1">Botão 1</button>
-    <button id="botao2">Botão 2</button>
-    <button id="botao3">Botão 3</button>
-    
-    
-
+    <button id="botao1">Botao 1</button>
+    <button id="botao2">Botao 2</button>
+    <button id="botao3">Botao 3</button>
 
     <script>
-        var botao = document.getElementById('botao1');
+        const bot1 = document.getElementById('botao1')
+        const bot2 = document.getElementById('botao2')
+        const bot3 = document.getElementById('botao3')
 
-        botao.addEventListener('click',function(){
-
-        window.alert('Você clicou no botão 1');
-        });
-    </script>
-
-    <script>
-        var botao2 = document.getElementById('botao2')
-
-        botao.addEventListener('click',function(){
-
-            window.alert('Você clicou no botao 2')
+        bot1.addEventListener('click', function(){
+            alert('Você clicou no botao 1')
         })
-        
-    </script>
-     <script>
-        var botao2 = document.getElementById('botao3')
-
-        botao.addEventListener('click',function(){
-
-            window.alert('Você clicou no botao 3')
+       
+        bot2.addEventListener('click',function(){
+            alert('Você clicou no botao 2')
         })
-        
+
+        bot3.addEventListener('click', function(){
+            alert('Você clicou no botao 3')
+        })
+
+   
+
     </script>
+
+
+    
 </body>
 </html>
