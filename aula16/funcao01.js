@@ -1,8 +1,9 @@
-function parimpar(n){
-    if (n%2 == 0){
-        return `Par!`
+function parImpar(n){
+    if(n%2 == 0){
+        return  'Par'
     }else{
-        return `Impar!`
+        return  'Impar'
     }
+    
 }
-console.log(parimpar(15))
+console.log(parImpar(4))

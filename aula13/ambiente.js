@@ -3,7 +3,7 @@ while (c <= 30){
     console.log(`Passo ${c}`)
     c++
     ++c //Dois c++ ++c pula os números de 2 em dois .
-}
+} 
 
 
 
