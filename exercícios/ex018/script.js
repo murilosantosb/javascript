@@ -1,7 +1,7 @@
 let num = document.querySelector('input#inum')
 let lista = document.getElementById('flista')
 let res = document.getElementById('res')
-let valores = []
+let valores = [] 
 
 
 
@@ -30,7 +30,7 @@ function adicionar(){
        let item = document.createElement('option')
        item.text = `O valor ${num.value} foi adicionado!`
        lista.appendChild(item)
-       res.innerHTML = ''
+       res.innerHTML = '' // Para Limpar o res ao adicionar elementos novamente
     }else{
         alert('Valor inválido ou já encontrado na lista!')
     }
