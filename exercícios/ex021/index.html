@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Adivinhação</title>
+</head>
+<body>
+    <h1>Adivinhe o Número Secreto:</h1>
+
+    <label for="inum">Escolha um número de 1 a 100</label>
+    <input type="number" name="num" id="inum" min="1" max="100" required>
+
+    <button id="btn_adivinhar">Tentar</button>
+
+    <div id="res"></div>
+
+    <script>
+        const num = document.querySelector('#inum');
+        const btn_adivinhar = document.getElementById('btn_adivinhar');
+        const div_res = document.querySelector('#res');
+
+        const numeroSecreto = parseInt(Math.random() * 100) + 1;
+
+        btn_adivinhar.addEventListener('click', () => {
+            const palpite = parseInt(num.value);
+
+            if (palpite === numeroSecreto) {
+                alert('Acertou!');
+            } else if (palpite > numeroSecreto) {
+                alert('Errou... o número secreto é menor.');
+            } else if (palpite < numeroSecreto) {
+                alert('Errou... o número secreto é maior.');
+            } else if (palpite < 1 || palpite > 100 || isNaN(palpite)) {
+                alert('Revise a caixa de números.');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da adivinhação</title>
+</head>
+<body>
+     <h1>Adivinhe o número Secreto:</h1>
+
+     <label for="inum">Escolha um número de 1 a 100</label>
+     <input type="number" name="num" id="inum" min="1" max="100" required>
+
+     <button id="btn_adivinhar">Tentar</button>
+
+     <div id="res">
+         
+     </div>
+
+    
+     <script>
+        let num = document.querySelector('#inum')
+        const btn_adivinhar = document.getElementById('btn_adivinhar')
+        const div_res = document.querySelector('#res')
+
+        var NumSecreto = parseInt(Math.random() * 100) + 1
+          
+            
+        btn_adivinhar.addEventListener('click', () => {
+            const palpite = parseInt(num.value);
+
+            if (palpite === numeroSecreto) {
+                alert('Acertou!');
+            } else if (palpite > numeroSecreto) {
+                alert('Errou... o número secreto é menor.');
+            } else if (palpite < numeroSecreto) {
+                alert('Errou... o número secreto é maior.');
+            } else if (palpite < 1 || palpite > 100 || isNaN(palpite)) {
+                alert('Revise a caixa de números.');
+            }
+        });
+        
+        
+       
+
+     </script>
+</body>
+</html>
+
+<!--
+    btn_adivinhar.addEventListener('click',(evt)=>{
+            if(num.value < 1 ||  num.value > 100){
+            alert('Revise a caixa de Números , e tente novamente')
+             }else if(num.value == NumSecreto){
+                alert('Você adivinhou , Meus Parabéns')
+             }else if(num.value >= 1 && num.value <= 56){
+                alert('Tente um número maior')
+             }else {
+                alert('Tente um número menor')
+             }
+        })
+-->
