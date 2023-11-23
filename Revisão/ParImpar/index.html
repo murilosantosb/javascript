@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            padding: 20px;
+            border-radius: 15px;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verifique Ser o Número é Par ou Impar:</h1>
+    <button onclick="Verificar()">Verificar</button>
+    
+    <script>
+        function Verificar(){
+            let numero = prompt('Digite um número:')
+            if(numero % 2 == 0){
+                return alert('Par')
+            }else{
+                return alert('Impar')
+            }
+        }
+    </script>
+</body>
+</html>

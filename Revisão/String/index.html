@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        input{
+            width: 350px;
+            border-radius: 15px;
+        }
+        button{
+            padding: 15px;
+            border-radius: 15px;
+            position: absolute;
+            top:33% ;
+            left: 16%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite seus dados:</h1>
+    <form action="" method="post">
+        <label for="inome">Nome:</label>
+        <input type="text" name="nome" id="inome">
+          <br>
+        <label for="isobrenome">Sobrenome:</label>
+        <input type="text" name="sobre" id="isobrenome">
+           <br>
+           <label for="idade">Idade:</label>
+           <input type="number" name="dade" id="idade">
+           <br>
+           <label for="iemail">E-mail:</label>
+           <input type="email" name="email" id="iemail">
+    </form>
+
+    <button onclick="Concatenar()">Login</button>
+    
+    <script>
+        function Concatenar(){
+            let nome = document.getElementById('inome')
+            let sobrenome = document.querySelector('#isobrenome')
+            let idade = document.querySelector('#idade')
+            let email = document.querySelector('#iemail')
+
+            let concatenado = alert(`Seja Muito Bem-Vindo ${nome.value } ${ sobrenome.value}`)
+            let notificação = alert(`Enviamos um código de verificação no seu E-mail : ${email.value}`)
+        }
+    </script>
+</body>
+</html>
