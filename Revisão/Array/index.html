@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Interactive Image Gallery</title>
+</head>
+<body>
+    <div class="galeria">
+        <div class="filter-options">
+            <button id="Todos" class="filter-btn" data-category="todos">Todos</button>
+            <button id="Natureza" class="filter-btn" data-category="natureza">Natureza</button>
+            <button id="Cidades" class="filter-btn" data-category="cidade">Cidade</button>
+            <!-- Add more categories as needed -->
+        </div>
+        <div class="imagens">
+            <img src="./natureza2.jpg" alt="Nature Image" data-category="natureza">
+            <img src="./cidade1.jpeg" alt="City Image" data-category="cidade">
+            <img src="./natureza.jpg" alt="natureza" data-category="natureza">
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

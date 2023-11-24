@@ -16,7 +16,9 @@ const listaDeTarefas  = {
     adicionarTarefa(){
         let tarefas = document.createElement('option')
         tarefas.innerHTML = `Tarefa: ${listaDeTarefas.Tarefa.value} <br> Hora de Realizar: ${listaDeTarefas.Hora.value}`
-        TarefasAdicionadas.appendChild(tarefas)
+        let btn_delete = document.createElement('button')
+        btn_delete.setAttribute('id','delete')
+        TarefasAdicionadas.appendChild(tarefas,btn_delete)
     }
     
 }
