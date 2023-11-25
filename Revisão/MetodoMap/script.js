@@ -3,6 +3,8 @@ let produtos = document.querySelector('#product-cards')
 let card = document.querySelector('.card-container')
 let CardProduto = document.querySelector('#productName')
 let Descricao = document.querySelector('#productDescription')
+let btn_concluir = document.querySelector('#btn_concluir')
+
 
 
 let cartoes = []
@@ -14,18 +16,34 @@ let NovosCards = cartoes.map((el)=>{
 btn_add.addEventListener('click',(evt)=>{
     const produto = document.createElement('div')
     const DescricaoProduct = document.createElement('p')
+    const botaoConcluir = document.createElement('span')
     produto.setAttribute('id','productName')
     produto.setAttribute('class','cards')
-    produto.textContent = `Nome do Produto:${CardProduto.value}`
+    produto.innerHTML = `Lembrete:<br/> ${CardProduto.value}`
 
     DescricaoProduct.setAttribute('id','productDescription')
-    DescricaoProduct.textContent = `Descrição do Produto: <br/>${Descricao.value}`
-   // DescricaoProduct.setAttribute('class','cards')
+    DescricaoProduct.innerHTML = `Descrição : <br/>${Descricao.value}`
+    DescricaoProduct.setAttribute('class','descricao')
+
+    botaoConcluir.innerHTML = `<span id="btn_concluir"  class="material-symbols-outlined ok">
+    check_circle
+    </span>`
+    botaoConcluir.setAttribute('class','ok')
+    
+    botaoConcluir.addEventListener('click',(evt)=>{
+        const classe = document.querySelector('.cards')
+        
+    })
+
+    
 
 
-    card.appendChild(produto )
-    card.appendChild(DescricaoProduct)
+    card.appendChild(produto)
+    produto.appendChild(DescricaoProduct)
+    produto.appendChild(botaoConcluir)
 
     cartoes.push()
 
 })
+
+
