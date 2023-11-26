@@ -6,7 +6,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: rgba(128, 0, 128, 0.626);
+    
+    background-color: rgba(137, 14, 141, 0.726);
 }
 
 .container {
@@ -87,6 +88,8 @@ body {
     height: 300px;
     width: 300px;
     border-radius: 50%;
+    border: none;
+ 
 }
 
 .NovaImagem{
@@ -96,7 +99,8 @@ body {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    display: none;
+    
+    
 }
 
 #btn_concluir{
@@ -105,4 +109,15 @@ body {
 
 .novo{
     background-color: #FFE4AF;
+}
+
+#Imagens{
+  
+   position: absolute;
+    top: 6%;
+    left: 5%;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    
 }

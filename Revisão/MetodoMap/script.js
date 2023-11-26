@@ -21,6 +21,7 @@ btn_add.addEventListener('click',(evt)=>{
     produto.setAttribute('id','productName')
     produto.setAttribute('class','cards')
     produto.innerHTML = `Lembrete:<br/> ${CardProduto.value}`
+    
 
     DescricaoProduct.setAttribute('id','productDescription')
     DescricaoProduct.innerHTML = `Descrição : <br/>${Descricao.value}`
@@ -37,31 +38,35 @@ btn_add.addEventListener('click',(evt)=>{
     botaoConcluir.setAttribute('class','ok')
     
     botaoConcluir.addEventListener('click',(evt)=>{
-        const classe = document.querySelector('.cards')
+       const classe = document.querySelector('.cards')
+       const novo = classe.classList.toggle('cards')
+       
+       classe.style.display = "none";
         
     })
 
     
 
-
+    
     card.appendChild(produto)
     produto.appendChild(DescricaoProduct)
     produto.appendChild(botaoConcluir)
     
 
     cartoes.push()
-
+    
+    
 })
 
 btn_add.addEventListener('click',(evt)=>{
-    let Imagem = document.querySelector('#novaImagem')
+    let div_Imagens = document.querySelector('#Imagens')
 
     let NovaImagem = document.createElement('img')
    // novaImagem.setAttribute('id','novaImagem')
     NovaImagem.setAttribute('class','NovaImagem')
     NovaImagem.src = "astronauta2.jpeg"
     
-    Imagem.appendChild(NovaImagem)
+    div_Imagens.appendChild(NovaImagem)
     
     //Imagem.style.display = "none"
     NovaImagem.style.display = "block";
