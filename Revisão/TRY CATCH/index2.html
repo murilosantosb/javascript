@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="" id="campo" value="valor do input ">
+
+    <script>
+
+        function getInputValue(id){
+          const dom = document.querySelector('#' + id)
+          if(!dom){
+            throw Error('O id não existe!')
+          }
+          return dom.value
+        }
+         
+        
+        try{//Trecho de código com potencial para falhar!
+            const val = getInputValue('campo')
+            alert(val)
+            
+           }catch(error){//Trecho de código que tratara o erro se caso houver uma excesão do TRY
+            alert('Deu Errado: ' + error.message)
+            //alert('Verifique o código novamente!')
+        }
+
+
+        try{//Trecho de código com potencial para falhar!
+           
+            }catch(error){//Trecho de código que tratara o erro se caso houver uma excesão do TRY
+           
+        }
+    </script>
+</body>
+</html>

@@ -7,6 +7,7 @@ let btn_concluir = document.querySelector('#btn_concluir')
 
 
 
+
 let cartoes = []
 
 let NovosCards = cartoes.map((el)=>{
@@ -25,6 +26,11 @@ btn_add.addEventListener('click',(evt)=>{
     DescricaoProduct.innerHTML = `Descrição : <br/>${Descricao.value}`
     DescricaoProduct.setAttribute('class','descricao')
 
+   
+    
+
+    
+
     botaoConcluir.innerHTML = `<span id="btn_concluir"  class="material-symbols-outlined ok">
     check_circle
     </span>`
@@ -41,8 +47,28 @@ btn_add.addEventListener('click',(evt)=>{
     card.appendChild(produto)
     produto.appendChild(DescricaoProduct)
     produto.appendChild(botaoConcluir)
+    
 
     cartoes.push()
+
+})
+
+btn_add.addEventListener('click',(evt)=>{
+    let Imagem = document.querySelector('#novaImagem')
+
+    let NovaImagem = document.createElement('img')
+   // novaImagem.setAttribute('id','novaImagem')
+    NovaImagem.setAttribute('class','NovaImagem')
+    NovaImagem.src = "astronauta2.jpeg"
+    
+    Imagem.appendChild(NovaImagem)
+    
+    //Imagem.style.display = "none"
+    NovaImagem.style.display = "block";
+
+    
+
+   document.body.style.background = '#FFE4AF'
 
 })
 

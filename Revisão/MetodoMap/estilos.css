@@ -76,9 +76,11 @@ body {
     color: green;
     border-radius: 50%;
     padding: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
-img{
+.img {
     position: absolute;
     top: 6%;
     left: 5%;
@@ -87,6 +89,20 @@ img{
     border-radius: 50%;
 }
 
+.NovaImagem{
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: none;
+}
+
 #btn_concluir{
     
+}
+
+.novo{
+    background-color: #FFE4AF;
 }

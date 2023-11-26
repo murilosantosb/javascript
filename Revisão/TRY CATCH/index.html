@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Identificando Erro:</h1>
+    <label>Verifique Ser  é Par ou Impar:</label>
+    
+    <button id="Verificar">Verificar</button>
+     
+    <script>
+        let btn_verificar = document.querySelector('#Verificar')
+
+        btn_verificar.addEventListener('click',(evt)=>{
+            let digiteNum = prompt('Digite um Número')
+            
+            if(digiteNum % 2 == 0){
+                alert('Par')
+            }else if(digiteNum % 2 == 1){
+                alert('Impar')
+            }
+       
+           
+        try{
+           digiteNum != digiteNum
+        }catch(error){
+            alert('Deu errado' + error.message)
+        }
+     alert('Acabou')
+    })
+    </script>
+</body>
+</html>
