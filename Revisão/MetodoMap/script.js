@@ -42,6 +42,8 @@ btn_add.addEventListener('click',(evt)=>{
        const novo = classe.classList.toggle('cards')
        
        classe.style.display = "none";
+
+       alert(`Meus Parabéns Você Concluiu Esse Lembrete!`)
         
     })
 
