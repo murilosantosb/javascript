@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard Styles Example</title>
+    <style>
+        .elementoOrigem {
+            background-color: lightblue;
+            color: navy;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid navy;
+        }
+
+        .elementoDestino {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="elementoOrigem">
+        Elemento de Origem
+    </div>
+
+    <button onclick="copiarEstilos()">Copiar Estilos</button>
+    <button onclick="colarEstilos()">Colar Estilos</button>
+
+    <div class="elementoDestino">
+        Elemento de Destino
+    </div>
+
+    <script>
+        function copiarEstilos() {
+            const elementoOrigem = document.querySelector('.elementoOrigem');
+            const estilos = window.getComputedStyle(elementoOrigem);
+            
+            // Cria uma string de estilos a partir do objeto 'CSSStyleDeclaration'
+            const estilosString = Array.from(estilos).map(prop => `${prop}: ${estilos.getPropertyValue(prop)}`).join(';');
+
+            navigator.clipboard.writeText(estilosString)
+                .then(() => console.log('Estilos copiados para a área de transferência'))
+                .catch(err => console.error('Falha ao copiar estilos:', err));
+        }
+
+        async function colarEstilos() {
+            try {
+                const estilosString = await navigator.clipboard.readText();
+                const elementoDestino = document.querySelector('.elementoDestino');
+                
+                // Aplica os estilos ao elemento de destino
+                elementoDestino.style.cssText = estilosString;
+                
+                console.log('Estilos colados do clipboard');
+            } catch (err) {
+                console.error('Falha ao colar estilos:', err);
+            }
+        }
+    </script>
+
+</body>
+</html>
