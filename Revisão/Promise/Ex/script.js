@@ -95,4 +95,53 @@ TodasPromessas
     console.error(erro)
 })
 
-// Resolvendo várias promessas com race == Corrida , quando as promessas forem concluindo vão mostrando na tela
+// Resolvendo várias promessas com race == Corrida , quando as promessas forem concluindo vão mostrando na tela 
+
+const p4 = new Promise((resolver,rejeitar)=>{
+    setTimeout(()=>{
+        resolver('P1 ok!')
+    rejeitar('Falhar!')
+    },5000)
+})
+
+const p5 = new Promise((resolver,rejeitar)=>{
+    setTimeout(()=>{
+        resolver('P2 ok!')
+        rejeitar('Falhar!')
+    },7000)
+})
+
+const p6 = new Promise((resolver,rejeitar)=>{
+    resolver('P3 ok!')
+    rejeitar('Falhar!')
+})
+
+const TodasPromessass = Promise.race([p4,p5,p6])
+
+TodasPromessass
+.then((res)=>{
+    console.log('Todas Promessas foram concluidas')
+})
+.catch((erro)=>{
+    console.error(erro)
+})
+
+
+// Fetch request na API do GitHub
+// Fetch API
+
+const userName = 'murilosantosb'
+
+fetch(`https://api.github.com/users/${userName}`,{
+    method: 'GET',
+    headers:{
+        Accept: 'application/vnd.github.v3+json',
+
+    },
+}).then((response)=>{
+    console.log(typeof response)
+    console.log(response)
+    return response.json()
+}).then((data)=>{
+    console.log(`O nome do usuário é: ${data.name}`)
+})
